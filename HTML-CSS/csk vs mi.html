@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+
+<style type="text/css">
+
+.flipprogram {
+  
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  
+}
+    .flip{
+   position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d ;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    
+    
+
+ .front , .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+    
+
+	.back{
+		transform:  rotateY(180deg);
+        background-color: #2980b9;
+        color: white;
+   	    }
+
+
+	.flipprogram:hover .flip
+	{
+		 transform: rotateY(180deg);
+	}
+
+
+</style>
+
+<body style="background-color: cornsilk;">
+
+	<marquee><img src="C:\Users\Hp\Desktop\dhoni.jpg" width="500px"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYMs5scn5k9qIwqMZkQYvBEI45X1b_SrcpPg&usqp=CAU" width="500px"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0JAS7AErUeyGiyOwaFxRVeSIAtDW4qB41Xg&usqp=CAU" width="500px"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD1fWMRIJ1yQQnzzsB4_heqYO-VEUtQPCfuA&usqp=CAU" width="500px"></marquee>
+	<center><button onclick="this.innerHTML=Date()" > Click to know date</button></center>
+	<h2>Timing</h2>
+
+<center><p style=" font-family: cursive;"><b>Live Session of Match on this page starts in:</b></p>
+
+<p id="demo"></p></center>
+
+<script>
+setInterval(myTimer, 1000);
+
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+<center><p> Today's Match Highlights</p>
+<table >
+<th>
+		<div class="flipprogram">
+		  <div class="flip">
+		    <div class="front">
+			    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAv_YxuCgtFLyqgFr0xF4dM9ame9nD9V90VQ&usqp=CAU" style="width: auto; height: auto;">
+		    </div>
+		    <div class="back">
+				<span>Mahendra Singh Dhoni</span><br>
+				<span> CSK Captain </span>
+		    </div>
+		</div>
+		</div>
+</th>
+<th>
+	<div class="flipprogram">
+		<div class="flip">
+		    <div class="front">
+			   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq3G6Fk4N8HbLCIL-r9VVZvC7UneqeDP4u1g&usqp=CAU" style="width: auto; height: auto;">
+		    </div>
+		    <div class="back">
+				<span>Rohit Sharma</span><br>
+				<span> MI Captain </span>
+		    </div>
+		</div>
+	</div>
+</th>
+</table></center>
+
+
+</body>
+</html>
